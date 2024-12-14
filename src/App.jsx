@@ -5,7 +5,12 @@ import './App.css'
 
 function App() {
   const [count, setCount] = useState(0)
-
+  let date = new Date()
+  console.log(date);
+  let day = date.getDate()
+  let month = date.getMonth()
+  let year = date.getFullYear()
+  let currentDay = `${day} / ${month} / ${year}`
   return (
     <>
       <div>
@@ -26,7 +31,7 @@ function App() {
         </p>
       </div>
       <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
+        {currentDay}
       </p>
     </>
   )
