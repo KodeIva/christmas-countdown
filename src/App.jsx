@@ -4,10 +4,10 @@ import './App.css'
 
 
 function App() {
-  const [date, setDate] = useState(new Date().getTime());
+  const date = new Date().getTime()
   console.log(date);
   
-  const [christmasDay, setChtistmasDay] = useState(new Date('December 25,2024 00:00:00').getTime())
+  const christmasDay = new Date('December 25,2024 00:00:00').getTime()
   console.log(christmasDay);
   
   const [days, setDays] = useState(0)
@@ -34,26 +34,14 @@ function App() {
   let year = new Date().getFullYear()
   let currentDay = `${day}  ${month}  ${year}`
 
- //let daysLeft = christmasDay - date
- // console.log(daysLeft);
- 
- // let daysToChLeft = Math.floor(daysLeft / (1000 * 60 * 60 * 24))
- // console.log(daysToChLeft);
 
 useEffect(() => {
   let timer = setInterval(() => {
 
-
   let daysLeft = christmasDay - date
   console.log(daysLeft);
  
- 
-  //let daysToChLeft = Math.floor(daysLeft / (1000 * 60 * 60 * 24))
-  //console.log(daysToChLeft);
-
-
   let days = Math.floor(daysLeft / (24*60*60*1000))
-
 
   let hour = Math.floor(daysLeft/(1000*60*60) % 24)
   console.log(hour);
@@ -68,10 +56,11 @@ useEffect(() => {
   setHour(hour)
   setMinutes(mins)
   setSeconds(sec)
-  
   }, 1000)
-  return() => {clearInterval(timer)}
-},[christmasDay])
+  return() => {
+    clearInterval(timer)
+  }
+},[])
 
  
 
