@@ -5,15 +5,13 @@ import './App.css'
 
 function App() {
   const date = new Date().getTime()
-  console.log(date);
-  
   const christmasDay = new Date('December 25,2024 00:00:00').getTime()
-  console.log(christmasDay);
-  
+
   const [days, setDays] = useState(0)
   const [hour, setHour] = useState(0)
   const [minutes, setMinutes] = useState(0)
   const [seconds, setSeconds] = useState(0)
+  const [isChristmas, setIsChristmas] = useState(false)
   
   const months = [
   "January",
@@ -36,11 +34,11 @@ function App() {
 
 
 useEffect(() => {
-  let timer = setInterval(() => {
+
+  const timer = setInterval(() => {
 
   let daysLeft = christmasDay - date
-  console.log(daysLeft);
- 
+  if(daysLeft > 0) {
   let days = Math.floor(daysLeft / (24*60*60*1000))
 
   let hour = Math.floor(daysLeft/(1000*60*60) % 24)
@@ -56,13 +54,15 @@ useEffect(() => {
   setHour(hour)
   setMinutes(mins)
   setSeconds(sec)
+}else{
+  setIsChristmas(true)
+}
   }, 1000)
   return() => {
     clearInterval(timer)
   }
-},[])
+},[christmasDay])
 
- 
 
   
   return (
