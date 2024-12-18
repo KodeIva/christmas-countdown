@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import './App.css'
 
 
@@ -7,8 +7,13 @@ function App() {
   const [date, setDate] = useState(new Date().getTime());
   console.log(date);
   
-  const [christmasDay, setChtistmasDay] = useState(new Date('December 25,2024').getTime())
+  const [christmasDay, setChtistmasDay] = useState(new Date('December 25,2024 00:00:00').getTime())
   console.log(christmasDay);
+  
+  const [days, setDays] = useState(0)
+  const [hour, setHour] = useState(0)
+  const [minutes, setMinutes] = useState(0)
+  const [seconds, setSeconds] = useState(0)
   
   const months = [
   "January",
@@ -24,20 +29,51 @@ function App() {
   "November",
   "December",
 ];
-
   let day = new Date().getDate()
   let month = months[new Date().getMonth()]
   let year = new Date().getFullYear()
   let currentDay = `${day}  ${month}  ${year}`
 
- let daysLeft = christmasDay - date
-  console.log(daysLeft);
- let difference = parseInt(daysLeft)
- console.log(difference);
+ //let daysLeft = christmasDay - date
+ // console.log(daysLeft);
  
-  let daysToChLeft = Math.floor(daysLeft / (1000 * 60 * 60 * 24))
-  console.log(daysToChLeft);
+ // let daysToChLeft = Math.floor(daysLeft / (1000 * 60 * 60 * 24))
+ // console.log(daysToChLeft);
+
+useEffect(() => {
+  let timer = setInterval(() => {
+
+
+  let daysLeft = christmasDay - date
+  console.log(daysLeft);
+ 
+ 
+  //let daysToChLeft = Math.floor(daysLeft / (1000 * 60 * 60 * 24))
+  //console.log(daysToChLeft);
+
+
+  let days = Math.floor(daysLeft / (24*60*60*1000))
+
+
+  let hour = Math.floor(daysLeft/(1000*60*60) % 24)
+  console.log(hour);
   
+  let mins = Math.floor((daysLeft % (60*60*1000))/(60*1000))
+  console.log(mins);
+
+  let sec = Math.floor((daysLeft % (60*1000)) / 1000)
+  console.log(sec);
+  
+  setDays(days)
+  setHour(hour)
+  setMinutes(mins)
+  setSeconds(sec)
+  
+  }, 1000)
+  return() => {clearInterval(timer)}
+},[christmasDay])
+
+ 
 
   
   return (
@@ -49,7 +85,7 @@ function App() {
       <p>{christmasDay}</p>
 
       <div>
-        <h2>{daysToChLeft} Days Until Christmas</h2>
+        <h2>{days}Days {days} Until Christmas {hour} Hours {minutes}Mins {seconds} Secons </h2>
         <p>{}</p>
       </div>
     </>
