@@ -4,9 +4,8 @@ import './App.css'
 
 
 function App() {
-  const date = new Date().getTime()
+  
   const christmasDay = new Date('December 25,2024 00:00:00').getTime()
-
   const [days, setDays] = useState(0)
   const [hour, setHour] = useState(0)
   const [minutes, setMinutes] = useState(0)
@@ -36,8 +35,8 @@ function App() {
 useEffect(() => {
 
   const timer = setInterval(() => {
-
-  let daysLeft = christmasDay - date
+  let currentTime = new Date().getTime()
+  let daysLeft = christmasDay - currentTime
   if(daysLeft > 0) {
   let days = Math.floor(daysLeft / (24*60*60*1000))
 
@@ -58,9 +57,8 @@ useEffect(() => {
   setIsChristmas(true)
 }
   }, 1000)
-  return() => {
-    clearInterval(timer)
-  }
+  return() => clearInterval(timer)
+  
 },[christmasDay])
 
 
