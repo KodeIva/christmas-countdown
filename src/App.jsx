@@ -58,10 +58,10 @@ useEffect(() => {
   return (
     <div style={{ height: 2000, width: 2000, position: 'relative' }}>
         <Snowfall snowflakeCount={800} />
-     <div className='cr-day'>
-      <h4>How many days until</h4>
-      <h1>Christmas Day</h1>
-      <p>Wednesday, 25 December 2024</p>
+     <div className='cr-day m-10 '>
+      <h4 className='text-white text-xl leading-relaxed'>How many days until</h4>
+      <h1 className='text-white text-5xl leading-relaxed'>Christmas Day</h1>
+      <p className='text-white text-lg leading-relaxed'>Wednesday, 25 December 2024</p>
      </div>
     
       <div>
