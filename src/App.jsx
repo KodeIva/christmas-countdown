@@ -55,15 +55,18 @@ useEffect(() => {
 },[christmasDay])
 
   return (
-    <>
-    
-      <p> {currentDay}</p>
+    <div>
+     <div className='cr-day'>
+      <h4>How many days until</h4>
+      <h1>Christmas Day</h1>
+      <p>Wednesday, 25 December 2024</p>
+     </div>
     
       <div>
         <h2>{days}Days {hour < 10 ? `0${hour}` : hour} Hours {minutes < 10 ? `0${minutes}` : minutes}Mins {seconds < 10 ? `0${seconds}` : seconds} Secons </h2>
         <p>{}</p>
       </div>
-    </>
+    </div>
   )
 }
 
