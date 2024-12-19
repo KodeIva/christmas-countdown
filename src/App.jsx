@@ -1,8 +1,6 @@
 import { useEffect, useState } from 'react'
 import './App.css'
 
-
-
 function App() {
   
   const christmasDay = new Date('December 25,2024 00:00:00').getTime()
