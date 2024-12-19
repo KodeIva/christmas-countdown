@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import './App.css'
+import Snowfall from 'react-snowfall'
 
 function App() {
   
@@ -55,7 +56,8 @@ useEffect(() => {
 },[christmasDay])
 
   return (
-    <div>
+    <div style={{ height: 2000, width: 2000, position: 'relative' }}>
+        <Snowfall snowflakeCount={800} />
      <div className='cr-day'>
       <h4>How many days until</h4>
       <h1>Christmas Day</h1>
