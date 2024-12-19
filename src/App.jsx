@@ -59,11 +59,8 @@ useEffect(() => {
   return (
     <>
     
-      <p>
-   {currentDay}
-      </p>
-      <p>{christmasDay}</p>
-
+      <p> {currentDay}</p>
+    
       <div>
         <h2>{days}Days {hour < 10 ? `0${hour}` : hour} Hours {minutes < 10 ? `0${minutes}` : minutes}Mins {seconds < 10 ? `0${seconds}` : seconds} Secons </h2>
         <p>{}</p>
