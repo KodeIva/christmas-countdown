@@ -35,34 +35,27 @@ function App() {
 useEffect(() => {
 
   const timer = setInterval(() => {
-  let currentTime = new Date().getTime()
-  let daysLeft = christmasDay - currentTime
-  if(daysLeft > 0) {
-  let days = Math.floor(daysLeft / (24*60*60*1000))
+   let currentTime = new Date().getTime()
+   let daysLeft = christmasDay - currentTime
 
-  let hour = Math.floor(daysLeft/(1000*60*60) % 24)
-  console.log(hour);
+   if(daysLeft > 0) {
+    let days = Math.floor(daysLeft / (24*60*60*1000))
+    let hour = Math.floor(daysLeft/(1000*60*60) % 24)
+    let mins = Math.floor((daysLeft % (60*60*1000))/(60*1000))
+    let sec = Math.floor((daysLeft % (60*1000)) / 1000)
   
-  let mins = Math.floor((daysLeft % (60*60*1000))/(60*1000))
-  console.log(mins);
-
-  let sec = Math.floor((daysLeft % (60*1000)) / 1000)
-  console.log(sec);
-  
-  setDays(days)
-  setHour(hour)
-  setMinutes(mins)
-  setSeconds(sec)
-}else{
-  setIsChristmas(true)
-}
+    setDays(days)
+    setHour(hour)
+    setMinutes(mins)
+    setSeconds(sec)
+   }else{
+    setIsChristmas(true)
+  }
   }, 1000)
   return() => clearInterval(timer)
   
 },[christmasDay])
 
-
-  
   return (
     <>
     
@@ -72,7 +65,7 @@ useEffect(() => {
       <p>{christmasDay}</p>
 
       <div>
-        <h2>{days}Days {days} Until Christmas {hour} Hours {minutes}Mins {seconds} Secons </h2>
+        <h2>{days}Days {hour < 10 ? `0${hour}` : hour} Hours {minutes < 10 ? `0${minutes}` : minutes}Mins {seconds < 10 ? `0${seconds}` : seconds} Secons </h2>
         <p>{}</p>
       </div>
     </>
