@@ -57,7 +57,7 @@ useEffect(() => {
 },[christmasDay])
 
   return (
-    <div style={{ height: 1000, width: 1800, position: 'relative' }}>
+    <div style={{ height: 900, width: 1800, position: 'relative' }}>
         <Snowfall snowflakeCount={800} />
      <div className='cr-day m-10 '>
       <h4 className='text-white text-lg leading-snug font-light'>How many days until</h4>
