@@ -59,14 +59,21 @@ useEffect(() => {
     <div style={{ height: 2000, width: 2000, position: 'relative' }}>
         <Snowfall snowflakeCount={800} />
      <div className='cr-day m-10 '>
-      <h4 className='text-white text-xl leading-relaxed'>How many days until</h4>
-      <h1 className='text-white text-5xl leading-relaxed'>Christmas Day</h1>
-      <p className='text-white text-lg leading-relaxed'>Wednesday, 25 December 2024</p>
+      <h4 className='text-white text-xl leading-relaxed font-semibold'>How many days until</h4>
+      <h1 className='text-white text-6xl leading-relaxed font-semibold'>Christmas Day</h1>
+      <p className='text-white text-lg leading-relaxed font-semibold'>Wednesday, 25 December 2024</p>
      </div>
     
-      <div>
-        <h2>{days}Days {hour < 10 ? `0${hour}` : hour} Hours {minutes < 10 ? `0${minutes}` : minutes}Mins {seconds < 10 ? `0${seconds}` : seconds} Secons </h2>
-        <p>{}</p>
+      <div className='flex flex-col items-center text-white mx-10 mt-80 bg-slate-900 w-64'>
+        <div>
+          <h2 className='text-8xl'>{days}</h2>
+          <h2>Days</h2>
+        </div>
+        <div>
+          <span> {hour < 10 ? `0${hour}` : hour}  </span><p>Hours</p> 
+          <span>{minutes < 10 ? `0${minutes}` : minutes} </span>  <p>Mins</p>
+          <span> {seconds < 10 ? `0${seconds}` : seconds}   </span><p>Seconds</p>
+        </div>
       </div>
     </div>
   )
