@@ -64,21 +64,21 @@ useEffect(() => {
       <p className='text-white text-lg leading-relaxed font-semibold'>Wednesday, 25 December 2024</p>
      </div>
     
-      <div className='flex flex-col items-center text-white mx-10 mt-80 bg-slate-900 w-64'>
-        <div>
-          <h2 className='text-8xl'>{days}</h2>
-          <h2>Days</h2>
+      <div className='flex flex-col items-center text-white mx-10 mt-60 bg-slate-900 w-[400px]'>
+        <div className='flex flex-col items-center'>
+          <h2 className='text-[140px] font-bold'>{days}</h2>
+          <p className='text-xl'>days</p>
         </div>
         <div className='flex'>
-          <span className='flex flex-col p-6 items-center text-6xl leading-relaxed'> 
+          <span className='flex flex-col py-7 px-8 items-center text-6xl leading-relaxed'> 
              {hour < 10 ? `0${hour}` : hour} 
                <p className='text-sm'>hours</p>  
                </span>
-          <span className='flex flex-col p-6 items-center text-6xl leading-relaxed'>
+          <span className='flex flex-col py-7 px-8  items-center text-6xl leading-relaxed'>
              {minutes < 10 ? `0${minutes}` : minutes}
                <p className='text-sm'>minutes</p>
                 </span>  
-          <span className='flex flex-col p-6 items-center text-6xl leading-relaxed'> 
+          <span className='flex flex-col py-7 px-8 items-center text-6xl leading-relaxed'> 
              {seconds < 10 ? `0${seconds}` : seconds}  
                <p className='text-sm'>seconds</p>
                 </span>
