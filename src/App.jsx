@@ -69,10 +69,19 @@ useEffect(() => {
           <h2 className='text-8xl'>{days}</h2>
           <h2>Days</h2>
         </div>
-        <div>
-          <span> {hour < 10 ? `0${hour}` : hour}  </span><p>Hours</p> 
-          <span>{minutes < 10 ? `0${minutes}` : minutes} </span>  <p>Mins</p>
-          <span> {seconds < 10 ? `0${seconds}` : seconds}   </span><p>Seconds</p>
+        <div className='flex'>
+          <span className='flex flex-col p-6 items-center text-6xl leading-relaxed'> 
+             {hour < 10 ? `0${hour}` : hour} 
+               <p className='text-sm'>hours</p>  
+               </span>
+          <span className='flex flex-col p-6 items-center text-6xl leading-relaxed'>
+             {minutes < 10 ? `0${minutes}` : minutes}
+               <p className='text-sm'>minutes</p>
+                </span>  
+          <span className='flex flex-col p-6 items-center text-6xl leading-relaxed'> 
+             {seconds < 10 ? `0${seconds}` : seconds}  
+               <p className='text-sm'>seconds</p>
+                </span>
         </div>
       </div>
     </div>
