@@ -64,7 +64,7 @@ useEffect(() => {
       <p className='text-white text-lg leading-relaxed font-semibold'>Wednesday, 25 December 2024</p>
      </div>
     
-      <div className='flex flex-col items-center text-white mx-10 mt-60 bg-slate-900 w-[400px]'>
+      <div className='flex flex-col items-center text-white mx-10 mt-60  w-[400px]'>
         <div className='flex flex-col items-center'>
           <h2 className='text-[140px] font-bold'>{days}</h2>
           <p className='text-xl'>days</p>
