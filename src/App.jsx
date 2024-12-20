@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import './App.css'
 import Snowfall from 'react-snowfall'
+import { PiCalendarDotsFill } from "react-icons/pi";
 
 function App() {
   
@@ -56,12 +57,15 @@ useEffect(() => {
 },[christmasDay])
 
   return (
-    <div style={{ height: 2000, width: 2000, position: 'relative' }}>
+    <div style={{ height: 1000, width: 1800, position: 'relative' }}>
         <Snowfall snowflakeCount={800} />
      <div className='cr-day m-10 '>
-      <h4 className='text-white text-xl leading-relaxed font-semibold'>How many days until</h4>
-      <h1 className='text-white text-6xl leading-relaxed font-semibold'>Christmas Day</h1>
-      <p className='text-white text-lg leading-relaxed font-semibold'>Wednesday, 25 December 2024</p>
+      <h4 className='text-white text-lg leading-snug font-light'>How many days until</h4>
+      <h1 className='text-white text-6xl leading-snug font-semibold'>Christmas Day</h1>
+      <span className='flex items-center text-white text-lg leading-snug font-light'>
+        <PiCalendarDotsFill  />
+        Wednesday, 25 December 2024
+      </span>
      </div>
     
       <div className='flex flex-col items-center text-white mx-10 mt-60  w-[400px]'>
