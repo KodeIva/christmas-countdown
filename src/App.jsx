@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import './App.css'
 import Snowfall from 'react-snowfall'
 import { PiCalendarDotsFill } from "react-icons/pi";
+import winter from './assets/christmas-tree-1.jpg'
 
 function App() {
   
@@ -57,28 +58,28 @@ useEffect(() => {
 },[christmasDay])
 
   return (
-    <div style={{ height: 900, width: 1800, position: 'relative' }}>
+    <div  className='main border-[5px] border-red-800 flex flex-col h-screen w-screen bg-cover bg-no-repeat ' style={{ height: '100vh', width: '100%', position: 'relative' ,backgroundImage: `url(${winter})`}} >
         <Snowfall snowflakeCount={800} />
-     <div className='cr-day m-10 '>
-      <h4 className='text-white text-lg leading-snug font-light'>How many days until</h4>
+     <div className='cr-day m-10  '>
+      <p className='text-white text-lg leading-snug font-light'>How many days until</p>
       <h1 className='text-white text-6xl leading-snug font-semibold'>Christmas Day</h1>
       <span className='flex items-center text-white text-lg leading-snug font-light'>
         <PiCalendarDotsFill  />
-        Wednesday, 25 December 2024
+        <p>Wednesday, 25 December 2024</p>
       </span>
      </div>
     
-      <div className='flex flex-col items-center text-white mx-10 mt-60  w-[400px]'>
-        <div className='flex flex-col items-center'>
+      <div className='date-time  flex flex-col items-center text-white mx-10 mt-50  h-[auto]  w-[300px]'>
+        <div className='date flex flex-col items-center'>
           <h2 className='text-[140px] font-bold'>{days}</h2>
           <p className='text-xl'>days</p>
         </div>
-        <div className='flex'>
+        <div className='time border-[5px] border-red-400 flex w-[300px] h-auto'>
           <span className='flex flex-col py-7 px-8 items-center text-6xl leading-relaxed'> 
              {hour < 10 ? `0${hour}` : hour} 
                <p className='text-sm'>hours</p>  
                </span>
-          <span className='flex flex-col py-7 px-8  items-center text-6xl leading-relaxed'>
+          <span className='flex flex-col py-7  px-8  items-center text-6xl leading-relaxed'>
              {minutes < 10 ? `0${minutes}` : minutes}
                <p className='text-sm'>minutes</p>
                 </span>  

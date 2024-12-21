@@ -1,10 +1,163 @@
-/*https://cdn.pixabay.com/photo/2017/11/14/00/57/christmas-2947257_1280.jpg*/
+/*https://cdn.pixabay.com/photo/2017/11/14/00/57/christmas-2947257_1280.jpg
+*/
+
+html {
+  height: 100%;
+}
 
 body {
-  background-image: url(./assets/christmas-tree-1.jpg);
-  background-size:cover;
-  background-position:center center;
-  background-repeat: no-repeat;
-  height: 100vh;
-  width: 100vh;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+@media screen and (max-width: 600px){
+.main {
+  height: 100%;
+  width: 100%;
+  justify-items: center;
+  align-items: center;
+}
+.cr-day {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-items: center;
+    height: 350px;
+    width: 300px;
+    border: 5px solid blue;
+  }
+  .cr-day h1 {
+    font-size: 40px;
+  }
+ .date-time {
+  border: 5px solid blue;
+  margin-bottom: 50px;
+ }
+ .date {
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    height: auto;
+    width: 200px;
+ }
+ .date h2 {
+  font-size: 50px;
+ }
+ .time {
+    display: flex;
+    justify-items: center;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    width: 300px;
+ }
+.time span {
+  font-size: 30px;
+  border: 1px yellow solid;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  padding-left: 16px;
+  padding-right: 16px;
+ }
+.time p {
+  font-size: 15px;
+ }
+}
+
+@media (min-width: 700px) and (max-width: 1200px) {    
+  .main {
+      height: 100%;
+      width: 100%;
+      justify-items: center;
+      align-items: center;
+    }
+  .cr-day {
+    display: flex;
+      flex-direction: column;
+      flex-wrap: nowrap;
+      align-items: center;
+      justify-items: center;
+      height: 350px;
+      width: 400px;
+      margin: 10px;
+  }  
+  .cr-day h1 {
+    font-size: 60px;
+  }
+  .cr-day p {
+    font-size: 25px;
+  }
+  .date-time {
+    width: 500px;
+    border: 5px solid green; 
+  }
+  .date {
+    display: flex;
+      justify-items: center;
+      align-items: center;
+      height: auto;
+    width: 500px;
+  }
+    .date h2 {
+       font-size: 90px;
+     }
+    .date p{
+      font-size: 45px;
+    }
+  .time {
+    display: flex;
+    justify-items: center;
+    justify-content: center;
+    align-items: center;
+    width: 500px;
+  }
+  
+  .time span {
+    font-size: 70px;
+    border: 2px yellow solid;
+    padding: 2px 36px;
+  }
+  .time p {
+    font-size: 30px;
+  }
+}
+
+@media (min-width: 1200px) and (max-width: 2000px) {
+  .main {
+      height: 100%;
+      width: 100%;
+      align-items: left;
+      padding-left: 100px;
+    }
+    .date-time {
+      border: 5px solid purple;
+      margin: 140px 40px;
+    }
+   .date {
+      display: flex;
+      justify-items: center;
+      align-items: center;
+      height: auto;
+      width: 500px;   
+    }
+    .date p {
+      font-size: 45px;
+    }
+    .time {
+      display: flex;
+      justify-items: center;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 100px;
+    }
+    .time span {
+      font-size: 70px;
+      border: 2px yellow solid;
+      padding: 2px 36px;
+    }
+    .time p {
+      font-size: 30px;
+    }
 }
