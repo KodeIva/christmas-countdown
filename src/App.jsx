@@ -58,7 +58,7 @@ useEffect(() => {
 },[christmasDay])
 
   return (
-    <div  className='main border-[5px] border-red-800 flex flex-col h-screen w-screen bg-cover bg-no-repeat ' style={{ height: '100vh', width: '100%', position: 'relative' ,backgroundImage: `url(${winter})`}} >
+    <div  className='main flex flex-col h-screen w-screen bg-cover bg-no-repeat ' style={{ height: '100vh', width: '100%', position: 'relative' ,backgroundImage: `url(${winter})`}} >
         <Snowfall snowflakeCount={800} />
      <div className='cr-day m-10  '>
       <p className='text-white text-lg leading-snug font-light'>How many days until</p>
@@ -74,7 +74,7 @@ useEffect(() => {
           <h2 className='text-[140px] font-bold'>{days}</h2>
           <p className='text-xl'>days</p>
         </div>
-        <div className='time border-[5px] border-red-400 flex w-[300px] h-auto'>
+        <div className='time flex w-[300px] h-auto'>
           <span className='flex flex-col py-7 px-8 items-center text-6xl leading-relaxed'> 
              {hour < 10 ? `0${hour}` : hour} 
                <p className='text-sm'>hours</p>  

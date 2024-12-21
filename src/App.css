@@ -26,13 +26,11 @@ body {
     justify-items: center;
     height: 350px;
     width: 300px;
-    border: 5px solid blue;
   }
   .cr-day h1 {
     font-size: 40px;
   }
  .date-time {
-  border: 5px solid blue;
   margin-bottom: 50px;
  }
  .date {
@@ -55,7 +53,6 @@ body {
  }
 .time span {
   font-size: 30px;
-  border: 1px yellow solid;
   padding-top: 2px;
   padding-bottom: 2px;
   padding-left: 16px;
@@ -91,7 +88,6 @@ body {
   }
   .date-time {
     width: 500px;
-    border: 5px solid green; 
   }
   .date {
     display: flex;
@@ -116,7 +112,6 @@ body {
   
   .time span {
     font-size: 70px;
-    border: 2px yellow solid;
     padding: 2px 36px;
   }
   .time p {
@@ -132,7 +127,6 @@ body {
       padding-left: 100px;
     }
     .date-time {
-      border: 5px solid purple;
       margin: 140px 40px;
     }
    .date {
@@ -154,7 +148,6 @@ body {
     }
     .time span {
       font-size: 70px;
-      border: 2px yellow solid;
       padding: 2px 36px;
     }
     .time p {
