@@ -126,8 +126,11 @@ body {
       align-items: left;
       padding-left: 100px;
     }
+    .cr-day {
+   padding-top: 60px;
+    }
     .date-time {
-      margin: 140px 40px;
+      margin: 100px 40px;
     }
    .date {
       display: flex;
