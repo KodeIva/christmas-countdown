@@ -1,6 +1,6 @@
 /*https://cdn.pixabay.com/photo/2017/11/14/00/57/christmas-2947257_1280.jpg
 */
-
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap');
 html {
   height: 100%;
 }
@@ -9,6 +9,10 @@ body {
   margin: 0;
   padding: 0;
   height: 100%;
+}
+
+.christmas {
+font-family: "Dancing Script", serif;
 }
 
 @media screen and (max-width: 600px){
