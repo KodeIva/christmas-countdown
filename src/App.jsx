@@ -6,7 +6,7 @@ import winter from './assets/christmas-tree-1.jpg'
 
 function App() {
   
-  const christmasDay = new Date('December 24,2024 00:00:00').getTime()
+  const christmasDay = new Date('December 25,2024 00:00:00').getTime()
   const [days, setDays] = useState(0)
   const [hour, setHour] = useState(0)
   const [minutes, setMinutes] = useState(0)
