@@ -6,7 +6,7 @@ import winter from './assets/christmas-tree-1.jpg'
 
 function App() {
   
-  const christmasDay = new Date('December 25,2024 00:00:00').getTime()
+  const christmasDay = new Date('December 24,2024 00:00:00').getTime()
   const [days, setDays] = useState(0)
   const [hour, setHour] = useState(0)
   const [minutes, setMinutes] = useState(0)
@@ -58,9 +58,15 @@ useEffect(() => {
 },[christmasDay])
 
   return (
+   
     <div  className='main flex flex-col h-screen w-screen bg-cover bg-no-repeat ' style={{ height: '100vh', width: '100%', position: 'relative' ,backgroundImage: `url(${winter})`}} >
         <Snowfall snowflakeCount={800} />
-     <div className='cr-day m-10  '>
+  {isChristmas ?(<div> <h1  className='text-white text-6xl '>Merry Christmas!!!</h1></div>)  
+    
+ :
+      (
+        <>
+         <div className='cr-day m-10  '>
       <p className='text-white text-lg leading-snug font-light'>How many days until</p>
       <h1 className='text-white text-6xl leading-snug font-semibold'>Christmas Day</h1>
       <span className='flex items-center text-white text-lg leading-snug font-light'>
@@ -68,8 +74,7 @@ useEffect(() => {
         <p>Wednesday, 25 December 2024</p>
       </span>
      </div>
-    
-      <div className='date-time  flex flex-col items-center text-white mx-10 mt-50  h-[auto]  w-[300px]'>
+        <div className='date-time  flex flex-col items-center text-white mx-10 mt-50  h-[auto]  w-[300px]'>
         <div className='date flex flex-col items-center'>
           <h2 className='text-[140px] font-bold'>{days}</h2>
           <p className='text-xl'>days</p>
@@ -89,6 +94,9 @@ useEffect(() => {
                 </span>
         </div>
       </div>
+      </>
+      )
+    }
     </div>
   )
 }
