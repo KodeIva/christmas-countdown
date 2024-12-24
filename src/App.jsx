@@ -61,7 +61,7 @@ useEffect(() => {
    
     <div  className='main flex flex-col h-screen w-screen bg-cover bg-no-repeat ' style={{ height: '100vh', width: '100%', position: 'relative' ,backgroundImage: `url(${winter})`}} >
         <Snowfall snowflakeCount={800} />
-  {isChristmas ?(<div> <h1  className='text-white text-6xl '>Merry Christmas!!!</h1></div>)  
+  {isChristmas ?(<div className='christmas'> <h1  className='text-red-500 text-8xl font-bold italic'>Merry Christmas!!!</h1></div>)  
     
  :
       (
