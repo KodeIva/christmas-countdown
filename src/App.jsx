@@ -3,10 +3,19 @@ import './App.css'
 import Snowfall from 'react-snowfall'
 import { PiCalendarDotsFill } from "react-icons/pi";
 import winter from './assets/christmas-tree-1.jpg'
+import christmas from './assets/christmas.jpg'
+import santa from './assets/santa.jpg'
+import tree from './assets/ai-generated-tree.png'
+import bunny from './assets/ai-generated-bunny.jpg'
+
+
 
 function App() {
+
+  const images =  [winter, christmas, santa, tree, bunny]
+  const [index, setIndex] = useState(0)
   
-  const christmasDay = new Date('December 25,2024 00:00:00').getTime()
+  const christmasDay = new Date('December 25,2025 00:00:00').getTime()
   const [days, setDays] = useState(0)
   const [hour, setHour] = useState(0)
   const [minutes, setMinutes] = useState(0)
@@ -31,6 +40,13 @@ function App() {
   let month = months[new Date().getMonth()]
   let year = new Date().getFullYear()
   let currentDay = `${day}  ${month}  ${year}`
+
+  useEffect(() => {
+   const imageGalleryInterval = setInterval(() => {
+    setIndex(prev => (prev + 1) % images.length)
+   },5000)
+   return () => clearInterval(imageGalleryInterval)
+  },[])
 
 
 useEffect(() => {
@@ -59,7 +75,7 @@ useEffect(() => {
 
   return (
    
-    <div  className='main flex flex-col h-screen w-screen bg-cover bg-no-repeat ' style={{ height: '100vh', width: '100%', position: 'relative' ,backgroundImage: `url(${winter})`}} >
+    <div  className='main flex flex-col h-screen w-screen bg-cover bg-no-repeat' style={{ height: '100vh', width: '100%', position: 'relative' ,backgroundImage: `url(${images[index]})`}} >
         <Snowfall snowflakeCount={800} />
   {isChristmas ?(<div className='christmas flex items-center  mt-32 w-[80%] h-[500px] border-3 border-gray-300'> <h1  className='text-red-500 text-6xl md:text-8xl font-bold italic'>Merry Christmas!!!</h1></div>)  
     
@@ -71,7 +87,7 @@ useEffect(() => {
       <h1 className='text-white text-6xl leading-snug font-semibold'>Christmas Day</h1>
       <span className='flex items-center text-white text-lg leading-snug font-light'>
         <PiCalendarDotsFill  />
-        <p>Wednesday, 25 December 2024</p>
+        <p>Wednesday, 25 December 2025</p>
       </span>
      </div>
         <div className='date-time  flex flex-col items-center text-white mx-10 mt-50  h-[auto]  w-[300px]'>
