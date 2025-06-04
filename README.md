@@ -1,8 +1,32 @@
-# React + Vite
+# Christmas Countdown App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Description
+ A festive React app that counts down the days until Christmas! 
+ This responsive web app displays a rotating background of seasonal
+ images, includes a live countdown timer.
 
-Currently, two official plugins are available:
+## Screenshot
+![](./src/assets/screenshot.jpg)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features
+- ⏰ Live countdoun
+- 🖼️ Auto-rotating background images
+- 📱 Responsive design for desktop, tablet, and mobile
+- 🎨 Tailwind CSS styling with smooth transitions
+- ⚛️ Built with React functional components and useState / useEffect
+
+## Link
+- [URL](https://biancas-christmas-countdown.netlify.app)
+
+## Technologies
+- React
+- Tailwind CSS
+- Javascript
+- Netlify
+
+## Dependencies
+- react-icons
+- react-snowfall
+
+## Deployment
+Deployed with Netlify
